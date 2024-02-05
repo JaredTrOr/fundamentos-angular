@@ -1,0 +1,24 @@
+<app-menu-fundamentos></app-menu-fundamentos>
+<div class="container mt-5">
+    <h1>Posts</h1>
+    <div class="mt-3">
+
+        <div *ngFor="let post of data" class="mt-5 bg-light p-4 rounded">
+            <p>By: {{ post.id }}</p>
+            <h4>Title: {{ post.title }}</h4>
+            <p>Body: {{ post.body }}</p>
+            <div class="buttons d-flex gap-2">
+                <div class="like-button">
+                    <span>{{ post.likeCounter }}</span>
+                    <button (click)="onClickLike(post.id)" type="button" class="btn like-button text-primary"><i class="fa-solid fa-thumbs-up"></i></button>
+                </div>
+
+                <div class="dislike-button">
+                    <span>{{ post.dislikeCounter }}</span>
+                    <button (click)="onClickDislike(post.id)" type="button" class="btn dislike-button text-danger"><i class="fa-solid fa-thumbs-down"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

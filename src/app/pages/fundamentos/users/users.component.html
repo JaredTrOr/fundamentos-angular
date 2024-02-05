@@ -1,0 +1,47 @@
+<app-menu-fundamentos></app-menu-fundamentos>
+<div class="container mt-5">
+    <h1>Users</h1>
+
+    <table class="table table-light mt-5">
+        <thead>
+            <tr class="table-dark">
+                <th>User information</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Edit info</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of data">
+                <td class="p-4">
+                    <div class="user d-flex align-items-center gap-3">
+                        <div class="user-image rounded-circle bg-success d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-user fa-2x text-light"></i>
+                        </div>
+                        <div class="user-information d-flex flex-column">
+                            <span class="fw-bold">{{ user.name }}</span>
+                            <span>&#64;{{ user.username }}</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="td-centered">
+                        {{ user.email }}
+                    </div>  
+                </td>
+                <td>
+                    <div class="td-centered">
+                        {{ user.phone }}
+                    </div>
+                </td>
+                <td>
+                    <div class="td-centered">   
+                        <button type="button" routerLink="/fundamentos/user_detail/{{ user.id }}" class="btn btn-warning rounded-pill">Edit</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,7 @@
+:root {
+    --bg-purple: #525CEB;
+}
+
+.bg-purple {
+    background-color: #525CEB !important;
+}

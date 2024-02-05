@@ -1,0 +1,29 @@
+<app-menu-fundamentos></app-menu-fundamentos>
+<div class="container mt-5 bg-light p-5 rounded">
+    <h1>Fundamentos de angular</h1>
+    <p>Mi nombre es {{ name }} {{ lastname }}</p>
+    <p>Mi edad es: {{ age }}</p>
+    <p>Mi comida favorita es: </p>
+
+    <ul class="favorite-food">
+        <li *ngFor="let food of favoriteFood" class="food">
+            {{ food }}
+        </li>
+    </ul>   
+    
+    <div class="mt-2">
+        <label for="name">Cambiar nombre:</label>
+        <input id="name" type="text" [(ngModel)]="name" placeholder="Escribe tu nombre">
+    </div>
+
+    <div class="mt-2">
+        <label for="lastname">Cambiar apellido:</label>
+        <input id="lastname" type="text" [(ngModel)]="lastname" placeholder="Escribe tu apellido">
+    </div>
+
+    <div *ngIf="switch" class="mt-2">
+        <p>Esto se muestra si esta verdadero</p>
+    </div>
+
+    <button type="button" class="btn btn-warning mt-3" (click)="changeValues()">Cambiar valores</button>
+</div>

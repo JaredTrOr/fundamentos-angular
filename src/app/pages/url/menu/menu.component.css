@@ -1,0 +1,20 @@
+.bg-purple {
+    background-color: #3559E0;
+}
+
+.text-light {
+    color: white;
+}
+
+.mt-7 {
+    margin-top: 7rem;
+}
+
+header {
+    height: 55vh;
+}
+
+.main-container {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

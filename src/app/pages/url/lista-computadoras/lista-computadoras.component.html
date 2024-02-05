@@ -1,0 +1,34 @@
+<div class="lista-computadoras">
+    <h1>Listado de computadoras</h1>
+
+    <div *ngIf="!listaComputadoras.length">No hay computadoras registradas</div>
+
+    <table *ngIf="listaComputadoras.length" class="table table-striped mt-5">
+        <thead>
+            <tr>
+                <th>ID computadora</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Tipo computadora</th>
+            </tr>
+        </thead>
+    
+        <tbody> 
+            <tr *ngFor="let computadora of listaComputadoras">
+                <td>{{ computadora.id }}</td>
+                <td>{{ computadora.marca }}</td>
+                <td>{{ computadora.modelo }}</td>
+                <td>{{ computadora.anio }}</td>
+                <td>{{ computadora.tipoComputadora }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="mt-5" *ngIf="listaComputadoras.length">
+        <h4>Tipos de computadoras</h4>
+        <p>1.-Computadora funcional</p>
+        <p>2.-Computadora no funcional</p>
+        <p>3.-Computadora defectuosa</p>
+    </div>
+</div>
